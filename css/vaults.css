@@ -1,0 +1,109 @@
+body {
+    background: var(--darkGrey);
+}
+.hide {
+    visibility: hidden;
+}
+/* Navbar layout */
+.navbar {
+    width: 100vw;
+    height: 80px;
+    background: var(--mainWhite);
+    color: var(--darkGrey);
+    padding: 0 2rem;
+    margin: auto 0;
+    align-items: center;
+}
+.navbar .brand {
+    grid-column: 1/10;
+    width: 100%;
+    height: 100%;
+}
+.navbar .brand img {
+    width:70px;
+    height: 70px;
+    margin: auto 0;
+}
+.navbar .claim-rewards {
+    grid-column: 10/13;
+    grid-gap: 0 .5rem;
+    width: 100%;
+}
+.navbar .claim-rewards button {
+    padding: .75rem 1.5rem;
+    color: var(--white);
+    background: var(--darkGrey);
+    border-radius: .5rem;
+}
+
+/* Container Layouts */
+.container {
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 1rem;
+    padding: 1rem;
+}
+
+.container .box {
+    width: 100%;
+    height: auto;
+    padding: 1rem 0;
+    color: var(--white);
+    grid-row: 1;
+}
+
+.container .box-1 {
+    grid-column: 1/7;
+}
+.container .box-2 {
+    grid-column: 7/13;
+}
+
+/* BOX-1 */
+.container .form-group {
+    width: 100%;
+    height: auto;
+    padding: 2rem 1rem;
+    background: var(--mainWhite);
+    border-radius: 1rem;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .25);
+    grid-gap: 2rem;
+}
+.container .form-group h1 {
+    text-align: center;
+    /* margin: 0 0 1.5rem; */
+    color: var(--darkGrey);
+}
+.container .form-group input,
+.container .form-group button {
+    width: 80%;
+    height: 40px;
+    margin: 0 auto;
+    border-radius: .5rem;
+}
+.container .form-group input {
+    padding: 0 1rem;
+    font-family: cursive;
+    letter-spacing: var(--mainSpacing);
+    margin: 0 auto;
+}
+.container .form-group button {
+    background: transparent;
+    border: 1px solid var(--darkGrey);
+    transition: var(--mainTransition);
+    letter-spacing: var(--mainSpacing);
+    font-size: .75rem;
+    font-weight: 900;
+}
+.container .form-group button:hover {
+    background: var(--darkGrey);
+    border: none;
+    color: var(--white);
+}
+
+@media (max-width: 767px) {
+    .container { grid-template-columns: 1fr; }
+    .container .box { grid-column: 1/13; }
+    .container .box-1 { grid-row: 1; }
+    .container .box-2 { grid-row: 2 }
+}

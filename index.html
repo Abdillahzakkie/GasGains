@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>GasGains</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.png">
+  <link rel="stylesheet" href="./css/index.css" />
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.3/dayjs.min.js"></script>
+  <script defer src="./js/clipboard.js"></script>
+  <script src="./js/web3.js"></script>
+  <script defer type="module" src="./js/index.js"></script>
+</head>
+
+<body>
+  <!-- Header -->
+
+  <header>
+    <div class="main-nav">
+      <div class="header-left">
+        <img src="assets/images/logo.png" class="logo" />
+        <p class="list-item eth-web eth-rate eth-rate-input">ETH $1400</p>
+        <p class="list-item oil-rate">
+          <img src="assets/images/gas-icon.png" />
+          <span class="gas_oracle">80</span>
+        </p>
+        <p class="list-item gasg12-web gasg-credits">GASG $12</p>
+      </div>
+      <div class="header-right-web">
+        <p class="access-code" onclick="copyToClipboard('copy-access-code')"><span
+            id="copy-access-code" class="walletAddressinput">0X48XX647</span>
+          <img src="assets/images/copy-icon.png" /></p>
+        <button type="button" class="btn">CHANGE WALLET</button>
+        <button type="button" class="btn">
+          <a href="./vaults.html">Vault</a>
+        </button>
+        <button type="button" class="btn">GAIN REWARDS</button>
+        <button type="button" class="btn unstake-token">Unstake</button>
+      </div>
+      <img src="assets/images/bar.svg" class="bar" id="bar" onclick="toggleContent()" />
+      <img src="assets/images/close.svg" class="close-icon d-none" id="close" onclick="toggleContent()" />
+    </div>
+    <div class="mobile-header d-none" id="dropdown-content">
+      <div class="header-right-mobile">
+        <p class="list-item eth-rate">ETH $1400</p>
+        <p class="list-item gasg-credits">GASG $12</p>
+        <div class="access-code-wrapper">
+          <p class="access-code" onclick="copyToClipboard('copy-access-code-mobile')"><span
+              id="copy-access-code-mobile">0X48XX647</span> <img src="assets/images/copy-icon.png" /></p>
+        </div>
+        
+        <div>
+          <button type="button" class="btn">Vault</button>
+        </div>
+
+        <div>
+          <button type="button" class="btn unlock-tokens">unstake</button>
+        </div>
+
+        <div><button type="button" class="btn">GAIN REWARDS</button></div>
+      </div>
+    </div>
+  </header>
+
+  <div class="empty-spacing"></div>
+
+  <!-- account overview -->
+  <div class="account-overview">
+    <p class="heading">ACCOUNT OVERVIEW</p>
+    <div class="overview-sections">
+      <div class="section">
+        <p class="section-heading">Current Balance</p>
+        <p class="gasg-balance">5620 GASG</p>
+        <p class="dollars gasg-balance-dollar">67440 USD</p>
+      </div>
+      <div class="section">
+        <p class="section-heading">Locked-In Balance</p>
+        <p class="gasg-balance locked-in-gasg-token">0.00 GASG</p>
+        <p class="dollars locked-in-dollar-token">0 USD</p>
+      </div>
+      <div class="section">
+        <p class="section-heading">Upcoming Cashback</p>
+        <p class="gasg-balance upcoming-gasg-token">0.00 GASG</p>
+        <p class="dollars">0 USD</p>
+      </div>
+      <div class="section">
+        <p class="section-heading">Total Cashback</p>
+        <p class="gasg-balance">0.00 GASG</p>
+        <p class="dollars">0 USD</p>
+      </div>
+      <div class="section">
+        <p class="section-heading">Expected Gains</p>
+        <p class="gasg-balance">0.00 GASG</p>
+        <p class="dollars">0 USD</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- transaction details -->
+  <div class="transaction-details">
+    <p class="heading">TRANSACTION DETAILS</p>
+    <div class="table-wrapper">
+      <table class="transaction-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Hash</th>
+            <th>From</th>
+            <th>To</th>
+            <th>Txn Fee(USD)</th>
+            <th>GasG Cashback</th>
+          </tr>
+        </thead>
+        <tbody class="inject-txns-lists">
+          <tr>
+            <td>0</td>
+            <td>1234</td>
+            <td>ABC</td>
+            <td>XYZ</td>
+            <td>500</td>
+            <td>100</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>122234</td>
+            <td>ABCD</td>
+            <td>XYZ</td>
+            <td>500</td>
+            <td>100</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</body>
+
+</html>

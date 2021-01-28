@@ -1,0 +1,41 @@
+* , ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --mainWhite: #f1f5f8;
+    --white: #fff;
+    --red: #e73a3a;
+    --yellow: #ffc107;
+    --darkGrey: #333;
+    --lightGrey: #5c5c5cb6;
+    --mainGreen: #29ca8e;
+    --mainSpacing: .1rem;
+    --wordSpacing: .25rem;
+    --mainTransition : all 2s ease-in-out;
+}
+
+li {
+    list-style: none;
+    display: inline;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+input, button, textarea {
+    border: none;
+    outline: none;
+}
+button { cursor: pointer; }
+
+.App { overflow: hidden; }
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    margin: 0 auto;
+}
